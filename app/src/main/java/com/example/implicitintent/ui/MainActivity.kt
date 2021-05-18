@@ -18,10 +18,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun addCallBack() {
         binding?.apply {
         openBtn.setOnClickListener {
-                startActivity( Intent("ali.open.ACTION"));
+              val intent = Intent("ali.open.ACTION")
+              intent.putExtra("username", editText.text.toString());
+              startActivity(intent)
             }
-
         }
     }
-
 }
